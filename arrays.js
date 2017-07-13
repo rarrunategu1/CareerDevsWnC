@@ -73,6 +73,31 @@ todos[0] = "item 1 updated"
 ["item 1 updated", "item 2", "item 3", "item 4"]
 
 
+//DELETE A TODO
+todos
+["item 1 updated", "item 2", "item 3", "item 4"]
+
+// to delete an item in the above array use .splice with PARENTHESIS
+todos.splice(0, 1)
+
+// the above code removes item 0 in the array, which is
+//"item 1 updated".  The next number "1" tells you how many items to delete
+//When you press return it should tell you what has been deleted.  
+//use todos again to see the new array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
