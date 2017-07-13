@@ -55,6 +55,25 @@ todos.push('item 4')
 ["item 1", "item 2", "item 3", "item 4"]
 
 
+//CHANGE AN EXISTING TODO
+todos
+["item 1", "item 2", "item 3", "item 4"]
+
+//using the above todos array you can use the following code
+//to remove an item
+
+todos[0]
+//The first number in the brackets is in regards to which item it wants to remove.
+// this will return
+"item 1"
+
+//to change it, do the following
+todos[0] = "item 1 updated"
+//which will return the following
+["item 1 updated", "item 2", "item 3", "item 4"]
+
+
+
 
 
 
