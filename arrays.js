@@ -1,3 +1,4 @@
+//Store todos
 ['item 1', 'item 2', 'item 3']
 //An array is a "list" in programming. Every item in an array
 //should have quotation marks and the list should start and end in a bracket.
@@ -15,3 +16,47 @@ var todos = ["item 1", "item 2", "item 3"]
 todos 
 //will return
 ["item 1", "item 2", "item 3"]
+
+
+//Display Todos
+console.log('hello there')
+//console.log prints out whatever is in parenthesis after it.
+//Text needs to be in quotes.  Pressig entere will give you the following:
+hello there
+
+//consle.log can also take multiple items as you'll see below:
+console.log('hello there', 'rose')
+// this would in return the following when pressing enter:
+hello there rose
+
+//using the var todos list from before var todos = ["item 1", "item 2", "item 3"]
+// you can use console.log to print the todos out as you'll see below:
+console.log(todos)
+// will return
+["item 1", "item 2", "item 3"]
+// remember that todos i the console.log is not in parenthesis
+//because it is a variable and not text.
+
+//if you add the following helpful text "My Todos" as you see below:
+console.log('My Todos:' ,todos)
+// it will return
+My Todos: ["item 1", "item 2", "item 3"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
