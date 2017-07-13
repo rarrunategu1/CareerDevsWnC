@@ -44,6 +44,33 @@ My Todos: ["item 1", "item 2", "item 3"]
 
 
 
+//ADDING NEW ITEMS TO TODOS LIST
+My Todos: ["item 1", "item 2", "item 3"]
+//using the above array write the following:
+toddos.push()
+//In the parenthesis you add the new item on the array.
+//.push adds it the end of the list.
+todos.push('item 4')
+//will return
+["item 1", "item 2", "item 3", "item 4"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
