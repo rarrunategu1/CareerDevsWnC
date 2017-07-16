@@ -176,6 +176,26 @@ changeTodo(0, 'changed again')
 //which will give you
 My todos: ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
 
+//FUNCTION TO DELETE A TODO
+function deleteTodo(position) {
+    todos.splice(position, 1);
+    displayTodos();
+}
+
+//to delete the first item
+displayTodos()
+My todos: ["item 2", "item 3", "new todo", "new todo", "hello there"]
+//undefined
+deleteTodo(0)
+//would return
+displayTodos()
+My todos: ["item 3", "new todo", "new todo", "hello there"]
+
+//deleting the third item
+
+deleteTodo(2)
+//which would return
+My todos: ["item 3", "new todo", "hello there"]
 
 
 
