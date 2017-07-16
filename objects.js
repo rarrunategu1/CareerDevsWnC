@@ -160,7 +160,38 @@ script.js:16 My Todos (3) ["item 1", "item 2", "item 3"]
 undefined
 
 
+//IT SHOULD HAVE AN ADDTODO METHOD
 
+
+//below is the old function
+
+//function addTodo(todo) {
+//  todos.push(todo);
+//  displayTodos();
+//}
+// add the new method addTodo and remove the old one
+//Note that since todos is defined on the object then we 
+//can name the todos.push and the displayTodos with a "this.""
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item 3'],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  },
+  addTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  }
+  
+ //on plunker inspect you'd add the following:
+ todoList.addTodo('plunker');
+ //and it would return:
+VM2884:1 My Todos (4) ["item 1", "item 2", "item 3", "plunker"]
+undefined
+ 
+ 
+ 
+ 
 
 
 
