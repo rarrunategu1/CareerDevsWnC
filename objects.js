@@ -102,6 +102,36 @@ rose.sayName()
 rose
     
 
+//V3 REQUIREMENTS
+//It should store the todos on an object
+//It should have a displayTodos method
+//It should have an addTodo method
+//It should have a changeTodo method
+//It should have a deleteTodo method
+
+
+//STORE TODOS ARRAY ON AN OBJECT
+
+//var todos = ['item 1', 'item 2', 'item 3'];
+
+//create an object below.  objects surrounded by curly braces
+//we want to add a property to our todos in the curly braces
+//follow the name of a property with a colon and then put in the value
+
+var todolist = {
+  todos: ['item 1', 'item 2', 'item 3']
+};
+//with the todos: property you can set a name (variable) to access it.
+//we named it var todolist which now allows us to remove the previous variable
+
+// on plunker be sure to right click inspect and on the console drop down select "plunker 
+//preview target".  Clear the console and when you write todolist you'll see all the following:
+
+//todolist
+//Object {todos: Array(3)}todos: Array(3)0: "item 1"1: "item 2"2: "item 3"length: 3__proto__: Array(0)__proto__: Object
+//editor-1.2.0.js:2 Event tracked Plunk Save Toolbar undefined undefined
+
+
 
 
 
