@@ -70,6 +70,105 @@ sayHiTo('gordon')
 //The above is a value passed into the function.
 //Once it's given a value then it returns hi gordon.
 
+//IT SHOULD HAVE A FUNCTION TO DISPLAY TODOS
+
+var todos = ['item 1', 'item 2', 'item 3']
+//then outline structure of functions like so:
+function functionaName() {
+    
+}
+//to write multiple lines in the braces hit "SHIFT ENTER" or it wont work.
+//let's use the following todo function:
+
+function displayTodos() {
+    console.log('My Toos:', todos);
+}
+//Once you hit enter after that, Javascript will know abou the function.
+// right after that function enter
+displayTodos()
+//Once yoou hit enter, javascript will run the code for you.
+
+//FUNCTION TO ADD NEW TODOS
+
+function addTodo() {
+    todos.push('new todo');
+    } 
+//Remember shift enter may help to do multipe lines
+
+addTodo()
+//will return undefined
+todos
+//will return 
+["item 1", "item 2", "item 3", "new todo"]
+
+// if you use the displayTodos functions it'll print it out too
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo"]
+
+//do another Todo
+addTodo()
+//then displayTodos will print out an extra array item on your array
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo"]
+
+//change the function to have displayTodos() at the end of the function so 
+//that you can see what happened, like so:
+function addTodo() {
+    todos.push('new todo');
+    displayTodos();
+    
+}
+//hit enter to add the function and use it by doing the following:
+addTodo()
+//which would return:
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo"]
+
+//customize the function by using the parameters and create a new variabe
+function addTodo(todo) {
+    todos.push(todo);
+    displayTodos();
+    
+}
+addTodo('some stuff')
+//when you give it the function todo in the parameters you have you have to give it 
+//a value as you see above.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
