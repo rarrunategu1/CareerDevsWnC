@@ -129,9 +129,66 @@ function addTodo(todo) {
     displayTodos();
     
 }
-addTodo('some stuff')
+addTodo('hello there')
 //when you give it the function todo in the parameters you have you have to give it 
 //a value as you see above.
+
+
+//FUNCTION TO CHANGE A TODO
+
+function changeTodo() {
+    todos[0] = 'some new value';
+    
+}
+//The above function would give you "some new value" on the first item
+//every single tie.  you should use the parameters to customize the behavior of your function
+//We want to customize the item we're interested in which is represented by the
+//0 in the todos brackets.Then we want to customize the new vaue.
+
+//The 0 can be represented by a parameter named position
+//The "some new value" can be represented by a newValue parameter
+function changeTodo(position, newValue) {
+    todos[0] = 'some new value';
+    todos[position] =newValue;
+    
+}
+//now that you've put parameters in, you can remove the second line so that
+//your function is the following:
+function changeTodo(position, newValue) {
+    todos[position] =newValue;
+    
+}
+
+//display your todos
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+
+//changed item 1 to the text changed
+changeTodo(0, 'changed')
+
+//The function will be the following
+function changeTodo(position, newValue) {
+    todos[position] =newValue;
+    displayTodos()
+}
+//change it again 
+changeTodo(0, 'changed again')
+//which will give you
+My todos: ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
