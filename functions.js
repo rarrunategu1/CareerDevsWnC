@@ -70,6 +70,182 @@ sayHiTo('gordon')
 //The above is a value passed into the function.
 //Once it's given a value then it returns hi gordon.
 
+//IT SHOULD HAVE A FUNCTION TO DISPLAY TODOS
+
+var todos = ['item 1', 'item 2', 'item 3']
+//then outline structure of functions like so:
+function functionaName() {
+    
+}
+//to write multiple lines in the braces hit "SHIFT ENTER" or it wont work.
+//let's use the following todo function:
+
+function displayTodos() {
+    console.log('My Toos:', todos);
+}
+//Once you hit enter after that, Javascript will know abou the function.
+// right after that function enter
+displayTodos()
+//Once yoou hit enter, javascript will run the code for you.
+
+//FUNCTION TO ADD NEW TODOS
+
+function addTodo() {
+    todos.push('new todo');
+    } 
+//Remember shift enter may help to do multipe lines
+
+addTodo()
+//will return undefined
+todos
+//will return 
+["item 1", "item 2", "item 3", "new todo"]
+
+// if you use the displayTodos functions it'll print it out too
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo"]
+
+//do another Todo
+addTodo()
+//then displayTodos will print out an extra array item on your array
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo"]
+
+//change the function to have displayTodos() at the end of the function so 
+//that you can see what happened, like so:
+function addTodo() {
+    todos.push('new todo');
+    displayTodos();
+    
+}
+//hit enter to add the function and use it by doing the following:
+addTodo()
+//which would return:
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo"]
+
+//customize the function by using the parameters and create a new variabe
+function addTodo(todo) {
+    todos.push(todo);
+    displayTodos();
+    
+}
+addTodo('hello there')
+//when you give it the function todo in the parameters you have you have to give it 
+//a value as you see above.
+
+
+//FUNCTION TO CHANGE A TODO
+
+function changeTodo() {
+    todos[0] = 'some new value';
+    
+}
+//The above function would give you "some new value" on the first item
+//every single tie.  you should use the parameters to customize the behavior of your function
+//We want to customize the item we're interested in which is represented by the
+//0 in the todos brackets.Then we want to customize the new vaue.
+
+//The 0 can be represented by a parameter named position
+//The "some new value" can be represented by a newValue parameter
+function changeTodo(position, newValue) {
+    todos[0] = 'some new value';
+    todos[position] =newValue;
+    
+}
+//now that you've put parameters in, you can remove the second line so that
+//your function is the following:
+function changeTodo(position, newValue) {
+    todos[position] =newValue;
+    
+}
+
+//display your todos
+displayTodos()
+My todos: ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+
+//changed item 1 to the text changed
+changeTodo(0, 'changed')
+
+//The function will be the following
+function changeTodo(position, newValue) {
+    todos[position] =newValue;
+    displayTodos()
+}
+//change it again 
+changeTodo(0, 'changed again')
+//which will give you
+My todos: ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "hello there"]
+
+//FUNCTION TO DELETE A TODO
+function deleteTodo(position) {
+    todos.splice(position, 1);
+    displayTodos();
+}
+
+//to delete the first item
+displayTodos()
+My todos: ["item 2", "item 3", "new todo", "new todo", "hello there"]
+//undefined
+deleteTodo(0)
+//would return
+displayTodos()
+My todos: ["item 3", "new todo", "new todo", "hello there"]
+
+//deleting the third item
+
+deleteTodo(2)
+//which would return
+My todos: ["item 3", "new todo", "hello there"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
