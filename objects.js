@@ -132,6 +132,33 @@ var todolist = {
 //editor-1.2.0.js:2 Event tracked Plunk Save Toolbar undefined undefined
 
 
+//IT SHOULD HAVE A DISPLAY TODOS METHOD
+
+
+function displayTodos() {
+  console.log('My Todos:', todos);
+}
+
+// To change this from a stand alone function to a method on this object  
+//you'll go to the var todolist previously created and add another property separated by a comma,
+//which will be the displayTodos function.  In console.log you will add 'My Todos' and to refer to the todos property on this object you'd add "this.todos"
+//When you're in a method you can access the object you're on using the "this" keyword.
+//The dot afterwards allows you to get a hold of a specific property and the property name is todos
+//...therefore this.todos.  The stand alone function is no longer necessary
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item 3'],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  }
+};
+
+//enter the following in plunker
+todoList.displayTodos();
+//it would return
+script.js:16 My Todos (3) ["item 1", "item 2", "item 3"]
+undefined
+
 
 
 
