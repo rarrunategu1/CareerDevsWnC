@@ -190,7 +190,48 @@ VM2884:1 My Todos (4) ["item 1", "item 2", "item 3", "plunker"]
 undefined
  
  
- 
+//IT SHOULD HAVE A CHANGETODO METHOD
+
+
+//change this old changeTodo function into a changeTodo method
+//function changeTodo(position, newValue) {
+//  todos[position] = newValue:
+//  displayTodos();
+//}
+
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item 3'],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  },
+  addTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  }
+};
+
+//hit save and open up console and try to run the change in plunker preview target:
+todoList.changeTodo(0, 'first');
+//hit enter and it returns:
+VM3157:1 My Todos (3) ["first", "item 2", "item 3"]
+undefined
+
+
+
+
+
+
+
+
+
+
+
+
  
 
 
