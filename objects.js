@@ -222,8 +222,48 @@ VM3157:1 My Todos (3) ["first", "item 2", "item 3"]
 undefined
 
 
+//IT SHOULD HAVE A DELETETODO METHOD
 
 
+
+//change this old deleteTodo function into a deleteTodo method
+//function deleteTodo(position) {
+//  todos.splice(position, 1);
+//  displayTodos();
+//}
+
+
+var todoList = {
+  todos: ['item 1', 'item 2', 'item 3'],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  },
+  addTodo: function(todo) {
+    this.todos.push(todo);
+    this.displayTodos();
+  },
+  changeTodo: function(position, newValue) {
+    this.todos[position] = newValue;
+    this.displayTodos();
+  },
+  deleteTodo: function(position) {
+     this.todos.splice(position, 1);
+     this.displayTodos();
+    
+  }
+  
+};
+
+//in plunker inspect enter:
+todoList.displayTodos();
+//it returns:
+script.js:4 My Todos (3) ["item 1", "item 2", "item 3"]
+undefined
+//then enter:
+todoList.deleteTodo(1);
+//it returns:
+script.js:4 My Todos (2) ["item 1", "item 3"]
+undefined
 
 
 
