@@ -89,8 +89,63 @@ VM435:4 My Todos [Object]0: Objectcompleted: falsetodoText: "second try"__proto_
 undefined
 
 
+//todoList.toggleCompleted should flip the completed property
+//like flipping a light switch
 
+//using the bang operator in the console ! followed by true will give you the opposite which is false
+//in the console you can do the following under this bang operator:
+var gordonBoolean = false;
+//hit enter
+undefined
+//enter the bang operator
+!gordonBoolean
+//it returns
+true
+//and if you set the variable to the bang operator of it
+gordonBoolean = !gordonBoolean
+//it returns
+true
 
+var todoList = {
+  todos: [],
+  displayTodos: function() {
+    console.log('My Todos', this.todos);
+  },
+  addTodo: function(todoText) {// addTodo('hi') todoText: 'hi',
+    this.todos.push({
+      todoText: todoText,
+      completed: false
+    });
+    this.displayTodos();
+  },
+  changeTodo: function(position, todoText) {
+    this.todos[position].todoText = todoText; //this.todos[position] is an object;
+    //because this is a todo object from the addTodo object we can get to a specific property using the .todoText 
+    this.displayTodos();
+  },
+   deleteTodo: function(position) {
+    this.todos.splice(position, 1);
+    this.displayTodos();
+    
+   },
+   toggleCompleted: function(position) {
+     var todo = this.todos[position];
+     todo.complete = !todo.complete;
+     this.displayTodos();
+   }
+  
+};
+
+//run the code and enter:
+todoList.addTodo('boolean testing');
+//which returns
+VM529:5 My Todos [Object]0: Objectcompleted: falsetodoText: "boolean testing"__proto__: Objectlength: 1__proto__: Array(0)
+undefined
+//enter the following
+todoList.toggleCompleted(0);
+//which then returns
+VM529:5 My Todos [Object]0: Objectcomplete: truecompleted: falsetodoText: "boolean testing"__proto__: Objectlength: 1__proto__: Array(0)
+undefined
 
 
 
