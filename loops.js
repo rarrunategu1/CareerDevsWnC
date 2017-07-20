@@ -68,3 +68,19 @@ for (var i=0; testArray.length; i++) {
 
 //this is better in case you have more than 3 Arrays, for example if you add one, it will just go with the length of the array, not limiting it.
 
+
+
+//.DISPLAYTODOS SHOULD SHOW .TODOTEXT
+
+var todoList = {
+    todos: [];
+    displayTodos: function() {
+        console.log('My Todos:'); //this.todo  was removed from here because it was printing out objects in the console 
+        for (var i=0; this.todos.length; i++) {
+            //let's say this.todos.length has 3 items
+            //i=0
+            //i=1
+            //i=2  it stops there because that's 3 items
+            console.log(this.todos[i].todoText); //this.todos[i] will give you each item on the array but we want the todotext property on each item on the array so this is what code we use
+}
+
