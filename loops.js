@@ -105,3 +105,45 @@ if (this.todos.length === 0) {
 }
 }
 }
+
+
+//DISPLAYTODOS SHOULD SHOW .COMPLETED
+
+
+item 1
+item 2
+item 3
+
+//we want it to show when item 1 has been completed
+//below is the kind of output we want showing that item 1 hasn't been completed
+
+() item 1
+(x) item 2
+(x) item 3
+
+//check if .completed is true
+//print with (x)
+//else
+//print with ()
+
+if (this.todos[i].completed === true) {
+    console.log('(x)', "this.todos[i].todoText);
+} else {
+    console.log('()', this.todos[i].todoText);
+}
+
+//when running in the console, if the todos are not defined then define them and then use .togglecompleted
+//to make whichever array you like complete and it will show an (x) by it.
+
+
+
+
+
+
+
+
+
+
+
+
+
