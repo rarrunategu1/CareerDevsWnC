@@ -84,3 +84,24 @@ var todoList = {
             console.log(this.todos[i].todoText); //this.todos[i] will give you each item on the array but we want the todotext property on each item on the array so this is what code we use
 }
 
+
+
+//.DISPLAYTODOS SHOULD TELL YOU IF .TODOS IS EMPTY
+
+
+//If this.todos.length === 0     triple equals is the most consistent way to compare different values in javascript
+
+
+//console.log('Your todo list is empty!');
+//else
+//print todos as normal
+
+if (this.todos.length === 0) {
+    console.log('Your todo list is empty!');
+} else {
+    console.log('My Todos:');
+        for (var i=0; this.todos.length; i++) {
+    console.log(this.todos[i].todoText);
+}
+}
+}
