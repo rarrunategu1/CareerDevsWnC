@@ -40,12 +40,36 @@ toggleAll: function() {
     
     this.displayTodos();
     
-        
-        
-        
-        
-        
-        
-        
+    todolist.toggleAll(); //to run on console
     }
 }
+
+
+
+
+//.toggleAll: Otherwise, make everything true...this is the else part of this statment
+
+ if(completedTodos === totalTodos) {
+        for (var i=0; i<totalTodos; i++) {
+            this.todos[i].completed = false;
+        }
+    } else {
+        for (var i = 0; i<totalTodos; i++) {
+            this.todos[i].completed = true;
+        }
+    }
+    
+    this.displayTodos();
+    
+    todolist.toggleAll(); //to run on console
+    }
+}
+
+
+
+
+
+
+
+
+
