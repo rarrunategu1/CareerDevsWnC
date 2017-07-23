@@ -17,6 +17,41 @@ Null        // 'Nothing'   //this is good to use if there is a test that hasn't 
 // if it doesn't look like a primitive value then it will be an object
 
 
+//COMPARISON WITH PRIMITIVES
+
+//Comparison with string
+'gordon' === 'gordon';
+//returns
+true
+
+'gordon1' === 'gordon';
+//returns
+false
+
+
+//Comparison with numbers
+1 === 1
+//returns true
+
+1 === 2
+//returns false
+
+
+//Comparison with booleans
+
+false === false
+//returns true
+
+false === true
+//returns false
+
+
+
+
+
+
+
+
 
 
 
