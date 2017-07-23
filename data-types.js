@@ -54,6 +54,31 @@ null === null
 //returns true
 
 
+//COMPARISONS WITH OBJECTS
+
+{} === {}
+//returns false
+
+[1, 2, 3] === [1, 2, 3]
+//returns false
+
+//javascript see each side as a seperate object
+//When you create an object javascript saves that object as a memory address.  
+//Each object has a seperate memory address
+
+var houseA = {};
+
+houseA === houseA
+//returns true
+// giving it a variable will allow the object to return true
+
+
+
+
+
+
+
+
 
 
 
