@@ -45,6 +45,19 @@ false === false
 false === true
 //returns false
 
+//Comparisons with Undefined and Null
+
+undefined === undefined
+//returns true
+
+null === null
+//returns true
+
+
+
+
+
+
 
 
 
