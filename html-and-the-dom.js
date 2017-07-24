@@ -17,6 +17,26 @@ displayTodosButton.addEventListener('click', function()
 
 
 
+//CLICKING 'TOGGLE ALL' SHOULD RUN TODOLIST.TOGGLEALL.
+
+var toggleAllButton = document.getElementById('toggleAllButton');
+console.log(toggleAllButton)
+
+toggleAllButton.addEventListener('click', function(){
+    todoList.toggleAll();
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
