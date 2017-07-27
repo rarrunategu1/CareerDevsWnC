@@ -22,15 +22,25 @@ var handlers = {
     toggleAll: function() {
         todoList.toggleAll();
     }
-    
-    
-    
-    
-    
-    
-}
+  };
 
+//THERE SHOULD BE A BUTTON FOR ADDING TODOS
 
+var handlers = {
+    displayTodos: function() {
+        todoList.displayTodos();
+    },
+    toggleAll: function() {
+        todoList.toggleAll();
+    },
+    addTodo: function() {
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+//addTodoTextInput code above removes what is written in a section after the search has completed.  Keeps it clear.        
+    }
+  };
+  
 
 
 
