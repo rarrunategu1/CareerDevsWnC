@@ -37,12 +37,33 @@ var handlers = {
         var addTodoTextInput = document.getElementById('addTodoTextInput');
         todoList.addTodo(addTodoTextInput.value);
         addTodoTextInput.value = '';
-//addTodoTextInput code above removes what is written in a section after the search has completed.  Keeps it clear.        
-    }
+  }
   };
+//addTodoTextInput code above removes what is written in a section after the search has completed.  Keeps it clear.        
   
+  
+//THERE SHOULD BE A BUTTON FOR CHANGING TODOS
 
-
+var handlers = {
+    displayTodos: function() {
+        todoList.displayTodos();
+    },
+    toggleAll: function() {
+        todoList.toggleAll();
+    },
+    addTodo: function() {
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+  },
+  changeTodo: function() {
+      var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
+      var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+      todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
+    changeTodoPositionInput.value = '';
+    changeTodoTextInput.value = '';
+  }
+  };
 
 
 
