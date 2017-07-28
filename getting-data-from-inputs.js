@@ -73,9 +73,28 @@ var handlers = {
       todolist.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
       toggleCompletedPositionInput.value = '';
       
+//INSERTING LI ELEMENTS INTO THE DOM      
       
-      
-      
+//in plunker preview
+var todoLI = document.createElement('li');
+//returns undefined
+todoLi
+//returns <li></li>
+var todosUL = document.querySelector('ul');
+//returns undefined
+todosUl
+//returns <ul></ul> which allows the element to appear on the page
+
+todosUl.appendChild(todoLi);
+//will insert a bullet on the page
+<li></li> //is in there now
+
+
+
+
+
+
+
       
       
       
