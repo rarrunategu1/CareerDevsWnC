@@ -81,6 +81,7 @@ var handlers = {
           todosUL.innerHTML = '';
           for (var i = 0; i <todoList.todos.length; i++)
           vartodoLi = document.createElement('li');
+          todoLi.textContent = todoList.todos[i].todoText;
           todosUl.appendChild(todoLi);
           
 
