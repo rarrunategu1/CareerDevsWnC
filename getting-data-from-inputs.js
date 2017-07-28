@@ -81,6 +81,17 @@ var handlers = {
           todosUL.innerHTML = '';
           for (var i = 0; i <todoList.todos.length; i++)
           vartodoLi = document.createElement('li');
+          var todo = todoList.todos[i];
+          
+          var todoTextWithCompletion = '';
+          if (todo.completed === true) {
+              todoTextWithCompletion = '(x) ' + todo.todoText;
+              }else {
+             todoTextWithCompletion = '() ' + todo.todoText;
+   
+              }
+              
+    
           todoLi.textContent = todoList.todos[i].todoText;
           todosUl.appendChild(todoLi);
           
