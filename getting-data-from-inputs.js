@@ -72,7 +72,21 @@ var handlers = {
       var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
       todolist.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
       toggleCompletedPositionInput.value = '';
-      
+  }
+  };
+  
+  var view = {
+      displayTodos: function() {
+             vartodosUl =document.querySelector('ul');
+          todosUL.innerHTML = '';
+          for (var i = 0; i <todoList.todos.length; i++)
+          vartodoLi = document.createElement('li');
+          todosUl.appendChild(todoLi);
+          
+
+          
+      }
+  }
 //INSERTING LI ELEMENTS INTO THE DOM      
       
 //in plunker preview
@@ -90,18 +104,23 @@ todosUl.appendChild(todoLi);
 <li></li> //is in there now
 
 
+//there should be an li element for every todo
 
 
 
 
 
-      
-      
-      
-  }
-  };
-
-//THERE SHOULD BE A BUTTON FOR DELETING TODOS
 
 
 
+
+
+
+
+
+
+
+
+
+
+    
