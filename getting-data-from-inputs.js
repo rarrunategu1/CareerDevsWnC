@@ -45,16 +45,17 @@ var handlers = {
 //THERE SHOULD BE A BUTTON FOR CHANGING TODOS
 
 var handlers = {
-    displayTodos: function() {
-        todoList.displayTodos();
-    },
+ 
     toggleAll: function() {
         todoList.toggleAll();
+                view.displayTodos();
+
     },
     addTodo: function() {
         var addTodoTextInput = document.getElementById('addTodoTextInput');
         todoList.addTodo(addTodoTextInput.value);
         addTodoTextInput.value = '';
+        view.displayTodos();
   },
   changeTodo: function() {
       var changeTodoPositionInput = document.getElementById('changeTodoPositionInput');
@@ -62,27 +63,83 @@ var handlers = {
       todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value);
     changeTodoPositionInput.value = '';
     changeTodoTextInput.value = '';
+            view.displayTodos();
+
   },
   deleteTodo: function() {
       var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput');
     todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
     deleteTodoPositionInput.value = '';
+            view.displayTodos();
+
   },
   toggleCompleted: function() {
       var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
       todolist.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
       toggleCompletedPositionInput.value = '';
-      
-      
-      
-      
-      
-      
-      
+              view.displayTodos();
+
   }
   };
+  
+  var view = {
+      displayTodos: function() {
+             vartodosUl =document.querySelector('ul');
+          todosUL.innerHTML = '';
+          for (var i = 0; i <todoList.todos.length; i++)
+          vartodoLi = document.createElement('li');
+          var todo = todoList.todos[i];
+          
+          var todoTextWithCompletion = '';
+          if (todo.completed === true) {
+              todoTextWithCompletion = '(x) ' + todo.todoText;
+              }else {
+             todoTextWithCompletion = '() ' + todo.todoText;
+   
+              }
+              
+    
+          todoLi.textContent = todoList.todos[i].todoText;
+          todosUl.appendChild(todoLi);
+          
 
-//THERE SHOULD BE A BUTTON FOR DELETING TODOS
+          
+      }
+  }
+//INSERTING LI ELEMENTS INTO THE DOM      
+      
+//in plunker preview
+var todoLI = document.createElement('li');
+//returns undefined
+todoLi
+//returns <li></li>
+var todosUL = document.querySelector('ul');
+//returns undefined
+todosUl
+//returns <ul></ul> which allows the element to appear on the page
+
+todosUl.appendChild(todoLi);
+//will insert a bullet on the page
+<li></li> //is in there now
+
+
+//there should be an li element for every todo
+
+//view.displayTodos() will allow you to escape the console.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
