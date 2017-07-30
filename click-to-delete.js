@@ -115,6 +115,7 @@ theProductOf2And10
 //         todoTextWithCompletion = '( ) ' + todo.todoText;
 //       }
       
+         todoLi.id = i;
 //       todoLi.textContent = todoTextWithCompletion;
         todoLi.appendChild(this.createDeleteButton());
 //       todosUl.appendChild(todoLi);
