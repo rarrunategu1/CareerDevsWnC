@@ -87,7 +87,10 @@ theProductOf2And10
 //     todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber);
 //     deleteTodoPositionInput.value = '';
 //     view.displayTodos();
-//   },
+   deleteTodo: function(position) {
+     todoList.deleteTodo(position);
+     view.displayTodos();//code above is now changed to this
+   },
 //   toggleCompleted: function() {
 //     var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput');
 //     todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber);
@@ -127,13 +130,24 @@ theProductOf2And10
     deleteButton.className = 'deleteButton';
     return deleteButton;
   },
+    setUpEventListeners: function() {
+    var todosUl = document.querySelector('ul');
 };
 
   var todosUl = document.querySelector('ul');
 
 todosUl.addEventListener('click', function (event) {
-  console.log(event.target.parentNode.id);
+  //console.log(event.target.parentNode.id);
+    //get the element that was clicked on.
+  var elementClicked = event.target;
+  //check if the elementClicked is a delete button
+  if(elementClicked.className === 'deleteButton') {
+  //run handlers.deleteTodo(position)
+  handlers.deleteTodo(parseInt(elementClicked.parentNode.id));
+   }
 });
+
+view.setUpEventListeners();
 
 //in the console you can now give that deletebutton a var
 view.createDeleteButton()
@@ -148,6 +162,8 @@ roseElement
 //use an eventlistener.  Using too many in the end could result in 
 //memory problems.  There is an easier way which you'll see in the js file above
 
+
+//parsInt() will turn a string into a number
 
 
 
