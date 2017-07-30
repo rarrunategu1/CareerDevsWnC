@@ -113,6 +113,40 @@ forEach(students, logName)
 //which also returns the names
 
 
+//addEventListener
+//handling elements in the DOM
+//the event listener listens for the click on the tutorials element to run the function
+tutorialsElement.addEventListener('click', function() {
+    console.log('The tutorials element was clicked!');
+});
+//returns undefined and now the function will happen when the click happens
+
+//addEventListener will run the function and when it does it will pass in an event object
+//you can choose to ignore the event object and our function just won't use it.  
+//everything will still work fine but if you choose to use it, do it like so:
+
+tutorialsElement.addEventListener('click', function(event) {
+    console.log(event);
+    console.log('The tutorials element was clicked!');
+});
+//which will return 
+The tutorials element was clicked!
+MouseEvent {isTrusted: true, screenX: 413, screenY: 146, clientX: 413, clientY: 51...}
+The tutorials element was clicked!
+//the above event gives you information about the click.  Where the mouse was..etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
