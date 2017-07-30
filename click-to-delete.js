@@ -126,8 +126,14 @@ theProductOf2And10
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'deleteButton';
     return deleteButton;
-  }
+  },
 };
+
+  var todosUl = document.querySelector('ul');
+
+todosUl.addEventListener('click', function (event) {
+  console.log(event.target.parentNode.id);
+});
 
 //in the console you can now give that deletebutton a var
 view.createDeleteButton()
@@ -136,6 +142,14 @@ var roseElement = view.createDeleteButton();
 undefined
 roseElement
 <button class=​"deleteButton">​Delete​</button>​
+
+//NOTE FOR SECTION "DELETE BUTTONS SHOULD HAVE ACCESS TO THE TODO ID"
+//*you don't want to do it in the create delete buttons function because you would 
+//use an eventlistener.  Using too many in the end could result in 
+//memory problems.  There is an easier way which you'll see in the js file above
+
+
+
 
 
 
