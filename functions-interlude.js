@@ -137,6 +137,22 @@ The tutorials element was clicked!
 
 
 
+//Buzzwords!  Vocabulary used when talking to other programmers!!
+
+There are two terms that are used:
+
+Higher order functions:
+.Functions that accept other functions
+.Enhance the behavior of other functions
+*examples are runWithDebugger(), forEach(), setTimeout(), and addEventListener() 
+
+Callback functions:
+.The functions that are passed into higher order functions
+*example is the functions that are passed into higher order functions
+ 
+
+
+
 
 
 
