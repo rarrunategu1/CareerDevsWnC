@@ -116,6 +116,7 @@ theProductOf2And10
 //       }
       
 //       todoLi.textContent = todoTextWithCompletion;
+        todoLi.appendChild(this.createDeleteButton());
 //       todosUl.appendChild(todoLi);
 //     }
 //   },
