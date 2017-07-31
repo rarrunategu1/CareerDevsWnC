@@ -142,7 +142,7 @@ this.todos.forEach(function(todo) {
   }
 };
 
-//BUT TO MAKE IT MORE SIMPLE, DELETE IT ALL AND REPLACE WITH
+//BUT TO MAKE IT MORE SIMPLE, DELETE IT ALL AND REPLACE WITH so that todoList.toggleAll uses forEach
  
   // Get number of completed todos.
     this.todos.forEach (function(todo) {
@@ -165,5 +165,23 @@ this.todos.forEach(function(todo) {
 
 //this.todos was removed
 
+
+//lines 78-94 become so that view.displayTodos uses forEach:
+  todoList.todos.forEach(function(todo, position) {
+      var todoLi = document.createElement('li');
+      var todoTextWithCompletion = '';
+
+      if (todo.completed === true) {
+        todoTextWithCompletion = '(x) ' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( ) ' + todo.todoText;
+      }
+      
+      todoLi.id = position;
+      todoLi.textContent = todoTextWithCompletion;
+      todoLi.appendChild(this.createDeleteButton());
+      todosUl.appendChild(todoLi);
+    }, this);
+  },
 
 
